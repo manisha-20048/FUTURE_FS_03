@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <section class="bg">
+    <div class="nav">
+        <h2 style="margin-top: 5px; background-color: bisque; border: 1px solid blanchedalmond;padding-bottom: 30px;border-radius: 10px;">Welcome {{name}}</h2>
+        <a href="{{url_for('menu')}}"><nav><center>Menu</center></nav></a>
+        <a href="{{url_for('view_orders')}}" style="padding-top: 13px;"><nav>My Orders</nav></a>
+        <a href="{{url_for('view_cart')}}" style="padding-top: 13px;"><nav> 🛒 Cart ({{ cart_count }})</nav></a>
+<form action="{{ url_for('delete_account') }}" method="POST" onsubmit="return confirm('Are you sure you want to delete your account? This cannot be undone!');">
+    <button type="submit" style="background-color:red; color:white; padding:10px; border:none; border-radius:5px;">
+        🗑️ Delete Account
+    </button>
+</form>
+    </div>
+    <img src="https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/5971321016d88c0452892178a240c4874aeee8cd" style="margin-top: 20px;" width="100%" height="50%">
+    <div>
+        <center><h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: indigo;font-weight: bold; background-color: yellowgreen; 
+        border-top-width: 30px solid yellowgreen;
+        border-bottom-width: 20px solid yellowgreen;width:150px; box-shadow: 10px 20px orangered; margin-bottom: 20px;margin-top: 40px;">About Us</h1></center> 
+    </div>
+
+    <section class="biryani">
+        <div>
+            <img src="https://t3.ftcdn.net/jpg/12/50/04/08/360_F_1250040864_jIryU4fg017WL09IsEw8m9pWXgblWxaV.jpg" width="500%">
+            <h2 style="margin-top: -55px; color: aliceblue;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: lavender;">Biryani</h2>
+        </div>
+        <div>
+            <p style="margin-left:40%; font-family:cursive ; font-weight: bold;margin-right: 30px;">Hyderabadi Biryani is not just a dish — it is a celebration of rich flavors, 
+royal heritage, and timeless tradition. Prepared using the finest long-grain basmati rice and perfectly marinated tender meat, 
+this iconic delicacy brings together a harmonious blend of spices, aroma, and texture in every bite.
+Our biryani is crafted using the traditional dum cooking method, where marinated chicken or mutton is layered with partially cooked basmati rice, caramelized onions, 
+fresh mint leaves, coriander, saffron milk, and handpicked aromatic spices. 
+The dish is then slow-cooked in a sealed pot to allow the flavors to infuse deeply, creating an unforgettable taste experience.
+Each spoonful delivers:
+The fragrance of premium basmati rice
+The richness of slow-cooked, juicy meat
+The warmth of authentic Indian spices
+The crunch of golden-fried onions
+The freshness of mint and coriander
+Served hot and fresh with cool raita and flavorful salan, this biryani offers the perfect balance of spice, aroma, and satisfaction.
+Whether you're craving comfort food or celebrating a special moment, our Hyderabadi Biryani promises a royal dining experience that keeps you coming back for more.
+Indulge in the legendary taste that has been loved for generations — bold, aromatic, and irresistibly delicious.</p>
+        </div>
+    </section>
+
+    <section class="pizza">
+        <div>
+           <p style="width:60vw;font-family: cursive ; font-weight: bold;margin-left: 30px;">🍕 Delicious Oven-Fresh Pizzas
+
+Indulge in the irresistible taste of our freshly baked pizzas, crafted with premium ingredients and bursting with flavor in every bite. 
+Prepared using hand-tossed dough, rich tomato sauce, 100% real mozzarella cheese, and a perfect blend of herbs and seasonings, our 
+pizzas are baked to golden perfection to deliver a crispy crust and a soft, cheesy center.
+Our secret lies in:
+
+Freshly prepared dough, hand-stretched daily.<br>
+
+Signature tangy tomato sauce.<br>
+
+Premium farm-fresh vegetables.<br>
+
+High-quality, juicy chicken toppings.<br>
+
+Generous layers of rich, creamy mozzarella.<br>
+
+A perfect sprinkle of Italian herbs and chili flakes.<br>
+
+Every slice delivers a combination of warmth, cheesiness, and authentic Italian-inspired flavors. 
+Perfect for family gatherings, celebrations, or satisfying your late-night cravings, our pizzas 
+promise comfort, indulgence, and happiness in every bite.
+
+🍕 Popular Pizza Varieties<br>
+🔥 Farmhouse Pizza<br>
+
+Loaded with fresh capsicum, onions, tomatoes, sweet corn, and olives, topped with extra cheese for a wholesome and flavorful vegetarian delight.<br>
+
+🍗 Chicken Supreme<br>
+
+A mouthwatering combination of tender grilled chicken, onions, capsicum, and spicy sauce layered with melted mozzarella cheese.<br>
+        </div>
+        <div>
+            <img src="https://www.shutterstock.com/image-photo/delicious-pizza-fresh-nutritious-vegetables-600nw-2607572607.jpg" width="500vw" height="450vh" >
+            <h2 style="margin-top: -55px; color: aliceblue;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: lavender;">Pizzas</h2>
+        </div>
+    </section>
+    <section class="biryani">
+        <div>
+            <img src="https://png.pngtree.com/png-clipart/20240610/original/pngtree-fast-food-big-burger-png-image_15295528.png" width="250%">
+        </div>
+        <div>
+            <p style="margin-left:40%; font-family:cursive ; font-weight: bold;margin-right: 30px;">🍔 Juicy & Flavor-Packed Burgers
+
+Sink your teeth into our irresistibly delicious burgers, crafted with freshly baked buns, juicy patties, crisp vegetables, and rich, creamy sauces. Every burger is prepared with carefully selected ingredients to deliver the perfect combination of crunch, softness, and bold flavor in every bite.
+
+Our burgers are made using soft, golden-toasted buns layered with fresh lettuce, sliced tomatoes, crunchy onions, and a perfectly grilled patty — whether vegetarian or non-vegetarian. Each layer is enhanced with signature sauces and melted cheese that elevate the taste and create a mouthwatering experience.
+
+We focus on:
+
+Freshly baked, soft sesame buns
+
+Juicy, perfectly seasoned patties
+
+Crisp farm-fresh vegetables
+
+Rich and creamy sauces
+
+Melted cheddar and mozzarella cheese
+
+Balanced spices for a satisfying taste
+
+Every bite offers a delightful mix of textures — the softness of the bun, the crunch of vegetables, the juiciness of the patty, and the creaminess of cheese and sauces. Whether you’re craving something spicy, cheesy, or classic, our burgers are the perfect comfort food for any time of the day.
+
+🍔 Popular Burger Varieties
+🔥 Classic Veg Burger
+
+A crispy vegetable patty layered with fresh lettuce, tomato, onion, and creamy mayo sauce, served inside a soft toasted bun.
+
+🍗 Chicken Zinger Burger
+
+Crispy fried chicken fillet coated in flavorful spices, topped with fresh veggies and signature sauce for a bold and crunchy experience.
+
+🧀 Double Cheese Burger
+
+Loaded with extra cheese slices, juicy patty, and special sauce for a rich and indulgent taste.
+
+🌶 Spicy Paneer Burger
+
+Grilled paneer patty infused with Indian spices, combined with fresh vegetables and tangy sauce for a spicy twist.</p>
+        </div>
+    </section>
+     <section class="desserts">
+        <div>
+           <p style="width:60vw;font-family: cursive ; font-weight: bold;margin-left: 30px;">🍨 Delightful Desserts – A Sweet Ending to Every Meal
+
+Indulge in a world of sweetness with our handcrafted desserts, made to satisfy your cravings and complete your dining experience. From creamy delights to chocolate indulgences, every dessert is prepared with high-quality ingredients and a passion for perfection.
+
+Our desserts are designed to offer a perfect balance of flavor, texture, and richness. Whether you love smooth and creamy, warm and gooey, or chilled and refreshing treats, we have something special for every sweet tooth.
+
+Each dessert is thoughtfully crafted to deliver:
+
+Rich and creamy textures
+
+Premium chocolate and fresh dairy
+
+Perfect sweetness balance
+
+Beautiful presentation
+
+Fresh and hygienic preparation
+
+Every bite melts in your mouth, leaving behind a delightful taste that makes you want more. Perfect for celebrations, special moments, or simply treating yourself after a satisfying meal.
+
+🍫 Popular Dessert Varieties
+🍫 Chocolate Lava Cake
+
+A warm, soft chocolate cake with a rich, molten chocolate center that flows out with every spoonful. Served warm for the ultimate indulgence experience.
+
+🍦 Classic Vanilla Ice Cream
+
+Smooth, creamy, and refreshing — made from premium dairy and natural vanilla flavor for a timeless classic dessert.
+
+🍰 Red Velvet Pastry
+
+Soft, moist layers of red velvet cake combined with rich cream cheese frosting for a luxurious and elegant treat.
+
+🍮 Caramel Custard
+
+Silky smooth custard topped with golden caramel sauce that melts beautifully in your mouth.
+
+🍨 Brownie with Ice Cream
+
+A warm, fudgy chocolate brownie paired with a scoop of chilled vanilla ice cream — the perfect hot-and-cold combination.
+
+🍰 Why Our Desserts Are Special
+
+We use:
+
+Premium quality cocoa and chocolate
+
+Fresh cream and milk
+
+Carefully measured ingredients
+
+Hygienic preparation methods
+
+Beautiful plating for a delightful experience
+
+Our desserts are more than just sweet treats — they are moments of happiness, crafted to bring smiles with every bite.</p>
+        </div>
+        <div>
+            <img src="https://t3.ftcdn.net/jpg/03/01/97/86/360_F_301978652_O0aPwap1JaEVaAhj3mIlbqNnJGmRyCzC.jpg" width="500vw" height="450vh" >
+            <h2 style="margin-top: -55px; color: aliceblue;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: lavender;">Desserts</h2>
+        </div>
+    </section>
+    </section>
+</body>
+</html>

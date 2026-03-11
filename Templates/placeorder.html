@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="/static/placeorder.css">
+</head>
+<body>
+    <section class="back">
+
+    <form class="form" method="POST" >
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+               {% for message in messages %}
+                 <p style="color:green; font-weight:bold ;"><center style="font-weight: bold;color:red;">{{ message }}</center></p>
+               {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1>Details of the customer</h1>
+        <label>Phno</label>
+        <input type="number" placeholder="Enter your name" name="phno"/>
+        <label>Address</label>
+        <input type="Text" placeholder="Enter your email" name="address"/>
+        <label>Quantity</label>
+        <input type="number" name="quantity" value="1" min="1">
+        <label>Payment Mode</label>
+        <select name="payment_mode" required>
+        <option value="">-- Select Payment --</option>
+        <option value="Cash on delivery">Cash on delivery</option>
+        </select>
+        <a href="{{url_for('view_orders')}}"><button type="submit">Place order</button></a>
+    </form>
+    </section>
+</body>
+</html>

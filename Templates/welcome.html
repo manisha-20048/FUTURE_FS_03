@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurent</title>
+    <link rel="stylesheet" href="/static/welcome.css">
+</head>
+<body>
+  <section class="back">
+  <center>
+  <section class="card">
+  <h2>Welcome To Foodie Zone</h2>
+
+
+<p>
+Please navigate through the dashboard to explore features.
+</p>
+    <div class="dropdown">
+        <div class="dropdown-content">
+          <a href="{{ url_for('admin_page') }}">Admin</a>
+          <a href="{{ url_for('user_page') }}">User</a>
+        </div>
+      </div>
+  </section>
+  </center>
+  </section>
+</body>
+</html> 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="/static/menu.css">
+</head>
+<body>
+    <section class="all">
+     {% for result in results %}
+        <div class="card">
+          <center><img src="{{result[1]}}" width="150"></center>
+          <a href="{{url_for('placeorder',product_id=result[0])}}" ><center>Place order</center></a>
+          <a href="{{url_for('deletecart',cart_id=result[5])}}" style="margin-top: 10px;" ><center>Delete cart</center></a>
+          <center><h3 style="margin-top: 5px;">{{result[2]}}</h3></center>
+          <center><p class="price">₹{{result[3]}}</p></center>
+          <center><p class="rating">Quantity:{{result[4]}}</p></center>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

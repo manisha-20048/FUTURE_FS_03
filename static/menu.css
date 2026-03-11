@@ -1,0 +1,119 @@
+/* .all{
+    display: flex;
+    flex-direction: row;
+    row-gap:200px;
+}
+
+.card{
+    margin-top: 10px;
+    border: 1px solid white;
+    width:220px;
+    height:290px;
+    padding: 15px;
+    border-radius:10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0,2);
+    background-color: aliceblue;
+    margin-left:40px;
+    margin-bottom: 120px;
+    width: 100vw;
+    
+}
+.card img{
+    width:50%;
+    height:30%;
+    border-radius: 10px;
+    margin-top:0px;
+}
+.card a{
+    border: none;
+    background-color:orange;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    font-size:20px;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.cart a:hover{
+    background-color: aqua;
+}
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #e63946;
+    margin-top:5px;
+    margin-bottom: 0;
+}
+.rating{
+    margin-top:0px;
+    margin-left: 10px;
+}    */
+
+.all {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background:aliceblue;
+    text-align: center;
+}
+.cart a:hover{
+    background-color: aqua;
+}
+.card a{
+    border: none;
+    background-color:orange;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    font-size:20px;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+@media (max-width:576px){
+    .all {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+}
+
+
+@media (min-width:576px) and (max-width:768px){
+    .all {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+}
+
+
+@media (min-width:786px) and (max-width:992px){
+    .all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 cards per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+}

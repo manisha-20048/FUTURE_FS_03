@@ -1,0 +1,75 @@
+.confirm-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.confirm-btn:hover {
+    background-color: darkgreen;
+}
+.all {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background:aliceblue;
+    text-align: center;
+}
+.cart a:hover{
+    background-color: aqua;
+}
+.card a{
+    border: none;
+    background-color:orange;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    font-size:20px;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+}
+@media (max-width:576px){
+    .all {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+}
+
+
+@media (min-width:576px) and (max-width:768px){
+    .all {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+}
+
+
+@media (min-width:786px) and (max-width:992px){
+    .all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    padding: 20px;
+}
+
+}

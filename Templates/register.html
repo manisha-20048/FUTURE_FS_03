@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/register.css">
+</head>
+<body>
+    <section class="back">
+
+    <form class="form" method="POST" >
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+               {% for message in messages %}
+                 <p style="color:green; font-weight:bold ;"><center style="font-weight: bold;color:red;">{{ message }}</center></p>
+               {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1>sign up with your Email</h1>
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" name="username"/>
+        <label>email</label>
+        <input type="email" placeholder="Enter your email" name="email"/>
+        <label>Password</label>
+        <input type="password" placeholder="Enetr your password" name="password"/>
+        <button type="submit">Submit</button>
+    </form>
+    </section>
+</body>
+</html>

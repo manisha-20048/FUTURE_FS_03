@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/menu.css">
+</head>
+<body>  
+    <section class="all">
+     {% for product in products %}
+        <div class="card">
+          <center><img src="{{product[1]}}" width="150"></center>
+          <a href="{{url_for('placeorder',product_id=product[0])}}" ><center>Place Order</center></a>
+          <a href="{{url_for('cart',product_id=product[0])}}" style="margin-top:5px;"><center>Add to cart</center></a>
+          <center><h3 style="margin-top: 5px;">{{product[2]}}</h3></center>
+          <center><p class="price">₹{{product[3]}}</p></center>
+          <center><p class="rating">⭐{{product[4]}}</p></center>
+        </div>
+        {% endfor %}
+    </section>
+
+</body>
+</html>

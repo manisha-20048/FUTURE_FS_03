@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/allorders.css">
+</head>
+<body>
+  
+    <section class="all">
+     {% for result in results %}
+        <div class="card">
+          <center><img src="{{result[1]}}" width="150"></center>
+          <center><h3 style="margin-top: 5px; font-weight: bold;">{{result[2]}}</h3></center>
+          <center><p style="margin-top: 5px; font-weight: bold;">₹{{result[3]}}</p></center>
+          <center><p style="margin-top: 5px; font-weight: bold;">Quantity:{{result[5]}}</p></center>
+           <center><p style="margin-top: 5px; font-weight: bold;">Order_Id:{{result[4]}}</p></center>
+           <center><p style="margin-top: 5px; font-weight: bold;">Status:{{result[6]}}</p></center>
+           {% if result[6]=='pending' %}
+              <form action="{{ url_for('update_status', order_id=result[0]) }}" method="POST">
+        <button type="submit" class="confirm-btn">Confirm Order</button>
+    </form>{% endif %}
+
+            <center><p style="margin-top: 5px; font-weight: bold;">Address:{{result[7]}}</p></center>
+             <center><p style="margin-top: 5px; font-weight: bold;">Date & Time:{{result[8]}}</p></center>
+            <center><p style="margin-top: 5px; font-weight: bold;">payment_mode:{{result[9]}}</p></center>
+
+        </div>
+        {% endfor %}
+    </section>   
+</body>
+</html>
