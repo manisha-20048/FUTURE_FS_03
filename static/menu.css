@@ -61,28 +61,30 @@
 }
 
 .card {
-     width: 100%;
-    max-width: 200px;   /* controls big card issue */
-    height: auto;
-    background: aliceblue;
-    padding: 10px;
-    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background:aliceblue;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .cart a:hover{
     background-color: aqua;
 }
-.card a {
-    display: block;
+.card a{
+    border: none;
+    background-color:orange;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    background: orange;
+    margin-left: 20px;
+    margin-right: 20px;
     color: white;
-    margin: 5px 20px;
-    padding: 6px;
-    border-radius: 8px;
-    font-size: 16px;
+    font-size:20px;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
 }
+
 
 @media (max-width:576px){
     .all {
