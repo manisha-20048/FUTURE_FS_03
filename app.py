@@ -106,6 +106,9 @@ def menu():
         except Exception as e:
             flash(e)
             return redirect(url_for('login'))
+    else:
+        flash("You didn't register or login")
+        return redirect(url_for('login'))
 @app.route('/cart/<int:product_id>',methods=['GET','POST'])
 def cart(product_id):
     if 'id' in session:
@@ -191,7 +194,7 @@ def cartcount():
             count=0
         return dict(cart_count=count)
     return dict(cart_count=0) 
-@app.route('/delete cart/<int:cart_id>')
+@app.route('/delete_cart/<int:cart_id>')
 def deletecart(cart_id):
     if 'id' in session:
         user_id=session['id']
