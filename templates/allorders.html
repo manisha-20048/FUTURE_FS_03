@@ -17,7 +17,7 @@
           <center><p style="margin-top: 5px; font-weight: bold;">Quantity:{{result[5]}}</p></center>
            <center><p style="margin-top: 5px; font-weight: bold;">Order_Id:{{result[4]}}</p></center>
            <center><p style="margin-top: 5px; font-weight: bold;">Status:{{result[6]}}</p></center>
-           {% if result[6]=='pending' %}
+           {% if result[6]=='Pending' %}
               <form action="{{ url_for('update_status', order_id=result[0]) }}" method="POST">
         <button type="submit" class="confirm-btn">Confirm Order</button>
     </form>{% endif %}
