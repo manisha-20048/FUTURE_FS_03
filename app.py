@@ -1,6 +1,7 @@
 from flask import Flask,request,jsonify,render_template,redirect,url_for,flash,session
 import mysql.connector
 import os
+print("Templates folder content:", os.listdir("templates"))
 app=Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "mysecretekey123")
 
