@@ -1,11 +1,16 @@
-from flask import Flask,redirect,url_for,render_template,session,request,flash
+from flask import Flask,request,jsonify,render_template,redirect,url_for,flash,session
 import mysql.connector
-
+import os
 app=Flask(__name__)
 app.secret_key='mysecretekey123'
-mydb=mysql.connector.connect(host='localhost',user='root',password='admin',database='task3')
+mydb=mysql.connector.connect( host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME"),
+    port=int(os.getenv("DB_PORT")),
+    ssl_disabled=False
+)
 cursor=mydb.cursor(buffered=True)
-
 @app.route('/')
 def welcome():
     return render_template('welcome.html')
