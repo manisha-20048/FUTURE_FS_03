@@ -2,12 +2,14 @@ from flask import Flask,request,jsonify,render_template,redirect,url_for,flash,s
 import mysql.connector
 import os
 app=Flask(__name__)
-app.secret_key='mysecretekey123'
-mydb=mysql.connector.connect( host=os.getenv("DB_HOST"),
+app.secret_key = os.getenv("SECRET_KEY", "mysecretekey123")
+
+mydb = mysql.connector.connect(
+    host=os.getenv("DB_HOST"),
     user=os.getenv("DB_USER"),
     password=os.getenv("DB_PASSWORD"),
-    database=os.getenv("DB_NAME"),
-    port=int(os.getenv("DB_PORT")),
+    database=os.getenv("DB_NAME", "defaultdb"),
+    port=int(os.getenv("DB_PORT", 3306)),  # FIXED
     ssl_disabled=False
 )
 cursor=mydb.cursor(buffered=True)
