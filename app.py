@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
     user=os.getenv("DB_USER"),
     password=os.getenv("DB_PASSWORD"),
     database=os.getenv("DB_NAME", "defaultdb"),
-    port=int(os.getenv("DB_PORT", 3306)),  # FIXED
+    port=int(os.getenv("DB_PORT") or 17943),  # FIXED
     ssl_disabled=False
 )
 cursor=mydb.cursor(buffered=True)
